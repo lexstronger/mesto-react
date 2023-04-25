@@ -39,7 +39,7 @@ function App() {
     }
   }
   return (
-    <div className='root'>
+    <div className='page'>
       <div className='page__container'>
         <Header />
         <Main 
