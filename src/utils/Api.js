@@ -38,7 +38,7 @@ class Api {
         headers: this._headers,
         body: JSON.stringify({
           name: data.name,
-          about: data.description,
+          about: data.about,
         })
       }
     )
@@ -94,6 +94,14 @@ class Api {
         headers: this._headers,
       }
     )
+  }
+
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked === true) {
+      return this.putLike(id)
+    } else {
+      return this.deleteLike(id)
+    }
   }
 }
 
